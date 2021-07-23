@@ -1,6 +1,6 @@
 import sys, os
 
-INTERP = "/home/wwagah/repositories/virtualenvs/file-sender/bin/python"
+INTERP = "/home/wwagah/repositories/file-sender-pro/.venv/bin/python"
 
 if sys.executable != INTERP: os.execl(INTERP, INTERP, *sys.argv)
 
