@@ -9,8 +9,10 @@ pillow = "*"
 python-dotenv = "*"
 pytest = "*"
 pytest-django = "*"
+django-bootstrap-v5 = "*"
 
 [dev-packages]
+mock = "*"
 
 [requires]
 python_version = "3.7"

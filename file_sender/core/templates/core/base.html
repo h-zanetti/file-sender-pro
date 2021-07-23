@@ -19,9 +19,18 @@
             </li>
         </ul>
     </header>
+    <div class="container w-50 mt-4">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
 
-    {% block content %}
-    {% endblock %}
+        {% block content %}
+        {% endblock %}
+    </div>
 
     <footer class="footer py-3 bg-dark fixed-bottom text-light text-center">
         <div class="container">
