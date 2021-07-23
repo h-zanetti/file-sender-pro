@@ -1,6 +1,11 @@
 {% extends 'core/base.html' %}
+{% load bootstrap5 %}
 {% block content %}
-<div class="container">
-    <h1>It works!</h1>
+<div class="p-4 border shadow">
+    <form action="{% url 'core:index' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
 </div>
 {% endblock %}
